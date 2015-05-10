@@ -6,7 +6,23 @@
     - name: Install kpatch dependencies 
       yum: pkg={{ item }} state=latest
       with_items:
+        # kpatch
         - gcc
         - kernel-devel
         - elfutils
         - elfutils-devel
+
+        # kpatch-build
+        - rpmdevtools
+        - pesign
+        - yum-utils
+        - zlib-devel
+        - binutils-devel
+        - newt-devel
+        - python-devel
+        - perl-ExtUtils-Embed
+        - audit-libs
+        - audit-libs-devel
+        - numactl-devel
+        - pciutils-devel
+        - bison
