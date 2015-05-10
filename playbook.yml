@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: Install kpatch dependencies 
+      yum: pkg={{ item }} state=latest
+      with_items:
+        - gcc
+        - kernel-devel
+        - elfutils
+        - elfutils-devel
