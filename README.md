@@ -9,5 +9,5 @@ Install
 Get vagrant and ansible:
 
 ```bash
-$ sudo yum install ansible vagrant
+$ sudo yum install ansible vagrant vagrant-libvirt
 ```
