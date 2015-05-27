@@ -1,10 +1,14 @@
 #!/bin/bash
 
+set -x
+
+sudo yum -y update
+
 # kpatch dependencies
-sudo yum install gcc kernel-devel elfutils elfutils-devel
+sudo yum -y install gcc kernel-devel elfutils elfutils-devel
 
 # kpatch-build dependencies
-sudo yum install \
+sudo yum -y install \
     rpmdevtools \
     pesign \
     yum-utils \
@@ -20,9 +24,10 @@ sudo yum install \
     bison
 
 sudo yum-config-manager --enable debug
-sudo yum-builddep kernel
-sudo debuginfo-install kernel
+sudo yum-builddep -y kernel
+sudo debuginfo-install -y kernel
 
-# cache compilation
-sudo yum install ccache
-ccache --max-size=5G
+# development
+sudo yum -y install git
+git clone https://github.com/dynup/kpatch.git
+pushd kpatch
