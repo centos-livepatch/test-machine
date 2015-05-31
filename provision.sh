@@ -34,3 +34,7 @@ git clone https://github.com/dynup/kpatch.git
 pushd kpatch
 make
 sudo make install
+popd
+
+# clone development repos
+git clone https://github.com/centos-livepatch/kpatch-package-builder.git
