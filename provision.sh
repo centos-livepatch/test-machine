@@ -31,3 +31,5 @@ sudo debuginfo-install -y kernel
 sudo yum -y install git
 git clone https://github.com/dynup/kpatch.git
 pushd kpatch
+make
+sudo make install
