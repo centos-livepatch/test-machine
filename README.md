@@ -6,8 +6,14 @@ Base vagrant machine for testing packages.
 Install
 -------
 
-Get vagrant and ansible:
+Get vagrant:
 
 ```bash
-$ sudo yum install ansible vagrant vagrant-libvirt
+$ sudo yum install vagrant vagrant-libvirt
+```
+
+Start machine:
+
+```bash
+$ vagrant up
 ```
