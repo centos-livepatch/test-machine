@@ -2,7 +2,7 @@
 
 set -x
 
-sudo yum -y update
+# sudo yum -y update
 
 # kpatch dependencies
 sudo yum -y install gcc kernel-devel elfutils elfutils-devel
