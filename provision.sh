@@ -30,7 +30,13 @@ sudo debuginfo-install -y kernel
 
 # development
 sudo yum -y install git
-git clone https://github.com/dynup/kpatch.git
+
+# branch with patch applied to fix builds using a srpm on centos.
+# Use this branch until https://github.com/dynup/kpatch/pull/490 is merged or
+# addressed in some other way
+git clone -b centos-kernel-package https://github.com/kragniz/kpatch.git
+# git clone https://github.com/dynup/kpatch.git
+
 pushd kpatch
 make
 sudo make install
