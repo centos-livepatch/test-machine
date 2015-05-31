@@ -21,7 +21,8 @@ sudo yum -y install \
     audit-libs-devel \
     numactl-devel \
     pciutils-devel \
-    bison
+    bison \
+    ncurses-devel
 
 sudo yum-config-manager --enable debug
 sudo yum-builddep -y kernel
